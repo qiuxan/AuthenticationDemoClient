@@ -21,7 +21,7 @@ while (password == null || string.IsNullOrWhiteSpace(password))
 
 var httpClient = new HttpClient();
 // Create a post request with the user name and password
-var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:7030/Account/login\n");
+var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:7030/Account/login");
 request.Content = new StringContent(JsonSerializer.Serialize(new LoginModel()
 {
     UserName = userName,
